@@ -54,14 +54,10 @@
           </a>
 
           <div class="project-preview video-wrapper">
-            <video
-              id="museaVideo"
-              src="images/musea.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-            ></video>
+<video autoplay muted loop playsinline preload="metadata">
+  <source src="images/musea.mp4" type="video/mp4" />
+</video>
+
 
             <button class="sound-toggle" onclick="toggleSound()">
               🔇
@@ -145,3 +141,4 @@
 
 </body>
 </html>
+
