@@ -623,3 +623,32 @@ a{ color: inherit; text-decoration: none; }
     grid-template-columns: 1fr;
   }
 }
+
+/* YOUTUBE SHORTS PREVIEW */
+
+.youtube-wrapper{
+  position: relative;
+  width: 100%;
+  height: 260px;              
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.35);
+}
+
+.youtube-wrapper iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.youtube-wrapper{
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.youtube-wrapper:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+
+
