@@ -1,0 +1,625 @@
+:root{
+  --bg: #ffffff;
+
+  /* Card colours */
+  --pink-100: #fbe6e6;
+  --pink-200: #f6b7b0;
+
+  /* Text */
+  --text: #111111;
+  --muted: #666666;
+
+  /* Layout */
+  --radius: 24px;
+  --gap: 22px;
+
+  --font: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+*{ box-sizing: border-box; margin: 0; padding: 0; }
+
+body{
+  background: var(--bg);
+  font-family: var(--font);
+  color: var(--text);
+}
+
+a{ color: inherit; text-decoration: none; }
+
+/* Full-window wrapper with a small white margin */
+.page{
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 24px;
+}
+
+/* Top pill navbar */
+.topbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--pink-100);
+  border-radius: var(--radius);
+  padding: 18px 28px;
+  margin-bottom: var(--gap);
+  width: 100%;
+}
+
+.logo{
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.nav{
+  display: flex;
+  gap: 34px;
+}
+
+.nav a{
+  font-size: 14px;
+  color: #444;
+}
+
+/* Main grid */
+.grid{
+  display: grid;
+  gap: var(--gap);
+  width: 100%;
+  grid-template-columns: 1.35fr 1fr 1.35fr;
+  grid-template-rows: 1fr 0.75fr;
+  min-height: calc(100vh - 120px);
+}
+
+/* Cards */
+.card{
+  background: var(--pink-100);
+  border-radius: var(--radius);
+  padding: 30px;
+}
+
+/* Title card */
+.title-card{
+  grid-column: 1;
+  grid-row: 1;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-card h1{
+  font-size: clamp(44px, 4.2vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -0.6px;
+}
+
+.title-card .italic{
+  font-style: italic;
+  font-weight: 400;
+}
+
+.title-card .bold{
+  font-weight: 700;
+}
+
+.icon-flower{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,0.08);
+  margin-left: auto;
+  opacity: 0.6;
+}
+
+.hero-eyebrow{
+  font-size: 44px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+  margin-bottom: 14px;
+}
+
+
+/* Image card */
+.image-card{
+  grid-column: 2;
+  grid-row: 1;
+  padding: 0;
+  overflow: hidden;
+}
+
+.image-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Projects card */
+.projects-card{
+  grid-column: 3;
+  grid-row: 1 / 3;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.projects-top{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 6px;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.project-row.featured{
+  font-size: 24px;
+}
+
+.arrow{
+  font-size: 22px;
+}
+
+/* ---------- VIDEO PREVIEW ---------- */
+
+.project-preview{
+  background: rgba(255,255,255,0.35);
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Video behaves like image */
+.project-preview video{
+  width: 100%;
+  height: 573px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Sound toggle button */
+.sound-toggle{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sound-toggle:hover{
+  background: rgba(0,0,0,0.85);
+}
+
+/* ---------------------------------- */
+
+.divider{
+  height: 2px;
+  background: rgba(0,0,0,0.10);
+  border-radius: 999px;
+}
+
+/* Push bottom pill down */
+.projects-bottom{
+  margin-top: auto;
+}
+
+/* Social pill */
+.social-pill{
+  background: rgba(255,255,255,0.35);
+  border-radius: 18px;
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+}
+
+/* Bio card */
+.bio-card{
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.icon-spark{
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.08);
+  opacity: 0.6;
+}
+
+.bio-card p{
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 23px;
+  max-width: 620px;
+}
+
+.bio-title{
+  font-size: 44px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
+/* Contact card */
+.contact-card{
+  grid-column: 2;
+  grid-row: 2;
+  background: var(--pink-200);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #333;
+  font-size: 20px;
+  opacity: 0.85;
+}
+
+.contact-link{
+  font-size: clamp(34px, 3.2vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+
+  display: inline-block;
+  transition: opacity 0.25s ease,
+              transform 0.25s ease,
+              text-shadow 0.25s ease;
+}
+
+.contact-qr{
+  background: rgba(255,255,255,0.35);
+  border-radius: 16px;
+  padding: 14px;
+
+  width: fit-content;
+  margin: 0 auto 16px auto;  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.contact-qr img{
+  width: 200px;        /* adjust size here */
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Hover effect ONLY on the text */
+.contact-link:hover{
+  opacity: 0.65;             
+  transform: translateY(-2px);
+  text-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* Clickable social column (YouTube) */
+.social-column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.35);
+  border-radius: 18px;
+  padding: 18px;
+
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  color: #111;
+
+  cursor: pointer;
+  transition: 
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+.social-column:hover{
+  background: rgba(255,255,255,0.55);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Optional: active click feedback */
+.social-column:active{
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+/* Video description under Latest Post */
+.video-description{
+  margin-top: 35px;
+  padding: 6px 4px 0;
+}
+
+.video-tagline{
+  font-size: 44px;
+  font-weight: 600;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 35px;
+}
+
+.video-text{
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 630px;
+}
+
+
+/* ---------------------------
+   ABOUT PAGE LAYOUT
+ */
+
+/* highlight active nav item */
+.nav a.active{
+  font-weight: 600;
+  color: #111;
+}
+
+/* 2 columns top, 1 column full-width bottom */
+.about-grid{
+  display: grid;
+  gap: var(--gap);
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+/* shared about card styling */
+.about-card{
+  padding: 30px;
+}
+
+/* full width bottom card */
+.about-wide{
+  grid-column: 1 / -1;
+  padding: 30px;
+}
+
+/* small heading above sections */
+.about-eyebrow{
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.6px;
+  margin-bottom: 16px;
+}
+
+/* items */
+.about-item{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about-title{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.about-meta{
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.about-text{
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* divider line */
+.about-divider{
+  height: 2px;
+  background: rgba(0,0,0,0.10);
+  border-radius: 999px;
+  margin: 18px 0;
+}
+
+/* responsive */
+@media (max-width: 980px){
+  .about-grid{
+    grid-template-columns: 1fr;
+  }
+  .about-wide{
+    grid-column: auto;
+  }
+}
+
+
+.about-gif{
+  grid-column: 1 / -1;          
+  display: flex;
+  align-items: center;          
+  justify-content: center;      
+  padding: 48px 24px;
+  min-height: 320px;          
+}
+
+/* GIF itself */
+.about-gif img{
+  max-width: 380px;             
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  opacity: 0.95;
+}
+
+
+
+/* 
+   GALLERY PAGE
+ */
+
+.gallery-hero{
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gallery-eyebrow{
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.6px;
+}
+
+.gallery-title{
+  font-size: clamp(40px, 4vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  line-height: 1.05;
+}
+
+.gallery-sub{
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+/* 3 image cards */
+.gallery-grid{
+  margin-top: var(--gap);
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-card{
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.gallery-media{
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.35);
+}
+
+.gallery-media img{
+  width: 100%;
+  height: 800px;          
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-caption{
+  padding: 4px 6px 10px;
+}
+
+.cap-title{
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.cap-text{
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/*Hover effect*/
+.gallery-card{
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.gallery-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .gallery-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-media img{
+    height: 320px;
+  }
+}
+
+/* ---------------------------
+   ABOUT PAGE – PERSONAL DETAILS
+---------------------------- */
+
+.personal-card{
+  grid-column: 1 / -1; /* full width */
+  padding: 30px;
+}
+
+.personal-grid{
+  display: grid;
+  gap: 18px 24px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+}
+
+.personal-item{
+  background: rgba(255,255,255,0.30);
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+
+.personal-label{
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.personal-value{
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* responsive */
+@media (max-width: 980px){
+  .personal-grid{
+    grid-template-columns: 1fr;
+  }
+}

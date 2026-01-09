@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qaizureen Mahadi - Portfolio Layout</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- Top pill navbar -->
+    <header class="topbar">
+      <div class="logo">QAIZUREEN MAHADI</div>
+
+      <nav class="nav">
+        
+     <a href="gallery.html">GALLERY</a>
+
+<a href="about.html">ABOUT ME</a>
+        <a href="https://linktr.ee/qaizureenmahadi">CONTACT</a>
+      </nav>
+    </header>
+
+    <!-- Main grid -->
+    <main class="grid">
+      <!-- Title card -->
+      <section class="card title-card">
+        <div class="icon-flower" aria-hidden="true"></div>
+
+<p class="hero-eyebrow">"Building ideas through media."</p>
+
+        <h1>
+          Content creator<br>
+          <span class="italic">in progress</span> <span class="bold">with</span><br>
+          <span class="bold">Passion-driven creativity</span>
+        </h1>
+      </section>
+
+      <!-- Profile image -->
+      <section class="card image-card" aria-label="Profile image">
+        <img src="images/profile.jpg" alt="Profile photo" />
+      </section>
+
+      <!-- Projects (spans two rows) -->
+      <section id="projects" class="card projects-card">
+        <div class="projects-top">
+          <a class="project-row featured" href="#">
+            <span class="project-name">Latest Post</span>
+            <span class="arrow">↗</span>
+          </a>
+
+          <div class="project-preview video-wrapper">
+            <video
+              id="museaVideo"
+              src="images/musea.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+
+            <button class="sound-toggle" onclick="toggleSound()">
+              🔇
+            </button>
+          </div>
+
+<div class="video-description">
+  <p class="video-tagline">
+    Music. Culture. Community.
+  </p>
+
+  <p class="video-text">
+    Here’s a glimpse of <strong>Pesona Kita Festival</strong> at Central Market Pasar Seni, featuring local bands, traditional multicultural dances and exciting booths.
+    <br><br>
+    I worked on this teaser video to spark interest and invite everyone to come feel the atmosphere in person.
+    <br><br>
+    Feel free to click the button below to watch the full video in my YouTube channel!
+  </p>
+</div>
+
+
+        <div class="projects-bottom">
+          <div class="social-pill">
+            
+            <a 
+  href="https://youtube.com/shorts/3trhULxMhUs?si=bb0L-M6ZZ3pTLvCZ" 
+  target="_blank" 
+  rel="noreferrer"
+  class="social-column"
+>
+  <span>YOUTUBE</span>
+</a>
+
+          
+          </div>
+        </div>
+      </section>
+
+      <!-- Bio -->
+      <section id="about" class="card bio-card">
+        <div class="icon-spark" aria-hidden="true"></div>
+
+         <h3 class="bio-title">Current Project</h3>
+
+        <p>
+          Final Year Project focused on managing and producing media for “Stop Cyberbullying and Online Scams” at ADTEC JTM Campus Pedas. Responsible for event coordination, content creation, video editing and ensuring media timelines align with the event schedule.
+        </p>
+      </section>
+
+      <!-- Contact -->
+<section id="contact" class="card contact-card">
+  <div class="contact-top">
+    <p>Have some questions?</p>
+    
+  </div>
+
+  <!-- QR image box -->
+  <div class="contact-qr">
+    <img src="images/qr.png" alt="Contact QR code">
+  </div>
+
+  <a class="contact-link" href="https://linktr.ee/qaizureenmahadi">
+    Contact me<br>
+  </a>
+</section>
+
+
+
+
+  </div>
+
+  <script>
+    function toggleSound(){
+      const video = document.getElementById("museaVideo");
+      const button = document.querySelector(".sound-toggle");
+
+      video.muted = !video.muted;
+      button.textContent = video.muted ? "🔇" : "🔊";
+    }
+  </script>
+
+</body>
+</html>
